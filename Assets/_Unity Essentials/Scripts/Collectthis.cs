@@ -20,7 +20,9 @@ public class Collectthis : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);      
+        Destroy(gameObject);
+        // Instantiate particle effect
+        Instantiate(onCollectEffect, transform.position, transform.rotation);      
     }
 
 }
