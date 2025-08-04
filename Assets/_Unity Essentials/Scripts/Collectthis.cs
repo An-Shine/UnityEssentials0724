@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Collectthis : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    
     public float rotationSpeed;
+    public GameObject onCollectEffect;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -16,4 +18,9 @@ public class Collectthis : MonoBehaviour
     {
         transform.Rotate(0, rotationSpeed, 0);
     }
+    public void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);      
+    }
+
 }
